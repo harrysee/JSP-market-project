@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+C:\projects\JSP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\288122420.index
+\WebMarket2\src
+C:\projects\jsp-project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\288122420.index
+\WebMarket2\src
+C:\projects\jsp-project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2442140123.index
+\WebShopping\src

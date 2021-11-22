@@ -1,0 +1,3 @@
+127.0.0.1 - - [22/Nov/2021:13:54:07 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [22/Nov/2021:13:54:10 +0900] "GET /WebMarket/welcome.jsp HTTP/1.1" 200 960
+0:0:0:0:0:0:0:1 - - [22/Nov/2021:13:54:10 +0900] "GET /WebMarket/resources/css/bootstrap.min.css HTTP/1.1" 200 144877
