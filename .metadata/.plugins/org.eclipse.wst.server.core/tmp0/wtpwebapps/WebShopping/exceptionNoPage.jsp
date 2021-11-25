@@ -18,7 +18,7 @@
 
 	<div class="container">
 		<p><%= request.getRequestURL() %></p>
-		<p><a href="projects.jsp" class="btn btn-secuondary">惑前 格废 &raquo;</a></p>
+		<p><a href="products.jsp" class="btn btn-secuondary">惑前 格废 &raquo;</a></p>
 	</div>
 
 	<%@include file="footer.jsp"%>

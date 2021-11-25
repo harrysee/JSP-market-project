@@ -12,7 +12,7 @@
 	 
 	<div class="jumbotron">
 		<div class="container">
-			<h1 class="display-3">로그인</h1> <!--출력문-->
+			<h1 class="display-3 list-title">로그인</h1> <!--출력문-->
 		</div>
 	</div>
 	<div class="container" align="center">

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nanum+Myeongjo&display=swap');
+:root {
+	--main-bg-color:#4f5f54;
+}
+
+.jumbotron{
+	background-color:#d5dee7;
+}
+
+.big_text{
+	color: #494886;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 80px;
+	text-align:center;
+}
+
+/* 메뉴 css */ 
+.navbar{
+	background-color:#566b87;
+	display: flex-box;
+	flex-flow: column
+}
+
+.navbar-brand{
+	color:#ffffff;
+}
+.nav-link{
+	color:#ffffff;
+}
+
+.list-title{
+	color:#588db3;
+	font-family: 'Bebas Neue', cursive;
+	font-family: 'Nanum Myeongjo', serif;
+}
+
+/* products css */
+.product-img{
+	border-radius: 10%;
+	box-shadow: 5px 5px 5px gray;
+	margin-bottom: 20px;
+}
+
+.go-details{
+	background-color: pink;
+	color: red;
+}
+
+.apply-btn{
+	background-color: #4f5f54;
+}
+
+.back-btn{
+	background-color: #63718a;
+}
+.go-btn{
+	background-color: #63718a;
+}
+
+/* 장바구니 */
+.btn-danger{
+	background-color:#d24c4c;
+}
+.btn-success{
+	background-color:#ea9833;
+}
+.btn-secondary{
+	background-color:#515c4d;
+}

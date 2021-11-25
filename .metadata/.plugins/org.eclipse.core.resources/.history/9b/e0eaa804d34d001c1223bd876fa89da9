@@ -1,0 +1,5 @@
+select * from product;
+
+select p_id from product;
+
+insert into product values("P1231","메모롤 테이프","6500","원하는 길이만큼 컷팅해 사용하는 점착형 메모지","sience","5000","good")

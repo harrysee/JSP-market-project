@@ -9,6 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="style.css"/>
 <title>상품 상세 정보</title>
 <script type="text/javascript">
 	function addToCart() {
@@ -24,21 +25,21 @@
 	<jsp:include page="menu.jsp"/>
 	<div class="jumbotron">
 		<div class="container">
-			<h1 class="display-3">상품 정보</h1>
+			<h1 class="display-2 list-title">상품 정보</h1>
 			<!--출력문-->
 		</div>
 	</div>
 
 	<%
-	String id = request.getParameter("id"); //id를 products.jsp에서 상세정보를 누르면 그 제품의 아이디를 받아옴
-	ProductRepository dao = ProductRepository.getInstance();
-	Product product = dao.getProductById(id); // 여기 등록되어있는 제품의 아이디랑 비교해서 가져옴
+		String id = request.getParameter("id"); // id를 products.jsp에서 상세정보를 누르면 그 제품의 아이디를 받아옴
+		ProductRepository dao = ProductRepository.getInstance();
+		Product product = dao.getProductById(id); // 여기 등록되어있는 제품의 아이디랑 비교해서 가져옴
 	%>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-5">
 				<img alt="" src="c:/upload/<%=product.getFilename()%>"
-					style="width: 100%">
+					style="width: 100%" class="product-img">
 			</div>
 			<div class="col-md-6">
 				<h3><%=product.getPname()%></h3>

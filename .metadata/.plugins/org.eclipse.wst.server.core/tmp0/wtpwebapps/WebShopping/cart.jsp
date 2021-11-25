@@ -7,17 +7,19 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+
 <%
 String cartId = session.getId();
 %>
 <title>장바구니</title>
 </head>
 <body>
-	<jspinclude page="menu.jsp" />
+	<jsp:include page="menu.jsp" />
 
 	<div class="jumbotron">
 		<div class="container">
-			<h1 class="display-3">장바구니</h1>
+			<h1 class="display list-title">장바구니</h1>
 			<!--출력문-->
 		</div>
 	</div>
@@ -29,7 +31,7 @@ String cartId = session.getId();
 					<td align="left"><a href="./deleteCart.jsp?cartId=<%=cartId%>"
 						class="btn btn-danger">삭제하기</a></td>
 
-					<td align="right"><a href="./shippingInfo.jsp?cartId=<%=cartId %>" class="btn btn-success">주문하기</a></td>
+					<td align="right"><a href="./shippingInfo.jsp?cartId=<%=cartId %>" class="btn btn-success ">주문하기</a></td>
 				</tr>
 			</table>
 		</div>

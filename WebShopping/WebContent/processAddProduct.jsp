@@ -1,8 +1,8 @@
 <%@page import="java.util.Enumeration"%>
 <%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
 <%@page import="com.oreilly.servlet.MultipartRequest"%>
-<%@page import="dto.Product"%>
-<%@page import="dao.ProductRepository"%>
+<%@page import="java.sql.*" %>
+<%@ include file="dbconn.jsp" %>
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%
 	request.setCharacterEncoding("UTF-8");
@@ -44,21 +44,24 @@
 	String fname =(String) files.nextElement();
 	String fileName = multi.getFilesystemName(fname);
 	
+	PreparedStatement pstmt = null;
+	String sql = "insert into product values(?,?,?,?,?,?,?,?,?);";	//밑의 쿼리문 미리 준비
+	pstmt = conn.prepareStatement(sql);	// 연결유지한 conn에 인설트문 완성해서 넘길거다 
+	pstmt.setString(1, productId);	// 물음표의 위치에 productId 넣기
+	pstmt.setString(2, name);	
+	pstmt.setInt(3, price);	
+	pstmt.setString(4, description);	
+	pstmt.setString(5, manufacture);	
+	pstmt.setString(6, category);	
+	pstmt.setLong(7, stock);	
+	pstmt.setString(8, condition);	
+	pstmt.setString(9, fileName);	
+	pstmt.executeUpdate();
 	
-	ProductRepository dao = ProductRepository.getInstance();
-	
-	Product newProduct = new Product();
-	newProduct.setProductId(productId);
-	newProduct.setPname(name);
-	newProduct.setUnitPrice(price);
-	newProduct.setDescription(description);
-	newProduct.setManufacturer(manufacture);
-	newProduct.setCategory(category);
-	newProduct.setUnitsInStock(stock);
-	newProduct.setCondition(condition);
-	newProduct.setFilename(fileName);
-	
-	dao.addProduct(newProduct);
+	if(pstmt != null)
+		pstmt.close();
+	if(conn != null)
+		conn.close();
 	
 	response.sendRedirect("products.jsp");
 %>

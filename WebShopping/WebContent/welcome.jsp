@@ -5,24 +5,25 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css" >
+<link rel="stylesheet" href="style.css" >
 <title>Welcome</title>
 </head>
 <body>
 	<jsp:include page="menu.jsp" />
 	
-	<%!	String greeting = "Welcome to Web Shopping Mall"; 
-		String tagline ="Welcome to Web Market!"; %>
+	<%!	String greeting = "Secret Notes"; 
+		String tagline ="wellcome study mall"; %>
 		
 	<div class="jumbotron">
 		<div class="container">
-			<h1><%=greeting %></h1> <!--Ãâ·Â¹®-->
+			<h1 class="big_text"><%=greeting %></h1> <!--ì¶œë ¥ë¬¸-->
 		</div>
 	</div>
 	
 	<main>
 		<div class="container">
 			<div class="text-center">
-				<h3><%=tagline %></h3>	<%--Ãâ·Â¹® --%>
+				<h3><%=tagline %></h3>	<%--ì¶œë ¥ë¬¸ --%>
 			</div>
 			<hr>
 		</div>

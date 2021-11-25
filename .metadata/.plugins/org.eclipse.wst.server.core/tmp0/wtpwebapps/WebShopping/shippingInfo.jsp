@@ -5,13 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css" >
 <title>shippingInfo</title>
 </head>
 <body>
 <jsp:include page="menu.jsp" />
 <div class="jumbotron">
 	<div class="container">
-		<h1 class="display-3">배송 정보</h1>
+		<h1 class="display list-title">배송 정보</h1>
 	</div>
 </div>
 <div class="container">
@@ -19,7 +20,7 @@
 	 class="form-horizontal" method="post">
 	 <input type="hidden" name="cartId" value="<%=request.getParameter("cartId")%>"/>
 	 <div class="form-group row">
-	 	<label class="col-sm-2">성명</label>
+	 	<label class="col-sm-2">이름</label>
 	 	<div class="col-sm-3">
 	 		<input name="name" type ="text" class="form-control"/>
 	 	</div>
@@ -51,10 +52,10 @@
 	 <div class="form-group row">
 	 	<div class="col-sm-offset-2">
 	 		<a href="./cart.jsp?cartId="<%=request.getAttribute("cartId")%>"
-	 		class="btn btn-secondary" role="button">이전</a>
-	 		<input type="submit" class="btn btn-primary" value="등록"/>
+	 		class="btn btn-secondary back-btn" role="button ">이전</a>
+	 		<input type="submit" class="btn btn-primary apply-btn" value="등록"/>
 	 		<a href="./checkoutCancelled.jsp"
-	 		class="btn btn-secondary" role="button">다음</a>
+	 		class="btn btn-secondary go-btn" role="button">다음</a>
 	 	</div>
 	 	</div>
 	</form>
